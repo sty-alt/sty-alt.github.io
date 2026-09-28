@@ -1,9 +1,20 @@
-const menu = document.querySelector('#menu-btn');
-const nav = document.querySelector('.site-header nav');
-menu?.addEventListener('click', () => nav.classList.toggle('open'));
-document.querySelectorAll('nav a').forEach((link) => link.addEventListener('click', () => nav.classList.remove('open')));
+const menuButton = document.querySelector('#menu-btn');
+const navigation = document.querySelector('#site-nav');
+
+menuButton?.addEventListener('click', () => {
+  const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+  menuButton.setAttribute('aria-expanded', String(!expanded));
+  menuButton.setAttribute('aria-label', expanded ? 'Открыть меню' : 'Закрыть меню');
+  navigation?.classList.toggle('open', !expanded);
+});
+
+navigation?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    navigation.classList.remove('open');
+    menuButton?.setAttribute('aria-expanded', 'false');
+    menuButton?.setAttribute('aria-label', 'Открыть меню');
+  });
+});
+
 document.querySelector('#print-btn')?.addEventListener('click', () => window.print());
-document.querySelector('#scan-btn')?.addEventListener('click', (event) => { const output = document.querySelector('#scan-output'); output.hidden = !output.hidden; event.currentTarget.textContent = output.hidden ? '▶ Run profile scan' : '■ Close scan'; });
-const items = document.querySelectorAll('.metric-grid article,.experience-card,.project-card,.side-card');
-const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), { threshold: .12 });
-items.forEach((item) => observer.observe(item));
+
