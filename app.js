@@ -1,20 +1,33 @@
-const menuButton = document.querySelector('#menu-btn');
-const navigation = document.querySelector('#site-nav');
+const nav = document.getElementById('site-nav');
+const menuBtn = document.getElementById('menu-btn');
 
-menuButton?.addEventListener('click', () => {
-  const expanded = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!expanded));
-  menuButton.setAttribute('aria-label', expanded ? 'Открыть меню' : 'Закрыть меню');
-  navigation?.classList.toggle('open', !expanded);
+const setMenu = (open) => {
+  nav.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', String(open));
+};
+
+menuBtn.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+nav.addEventListener('click', (event) => {
+  if (event.target.closest('a')) setMenu(false);
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setMenu(false);
 });
 
-navigation?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    navigation.classList.remove('open');
-    menuButton?.setAttribute('aria-expanded', 'false');
-    menuButton?.setAttribute('aria-label', 'Открыть меню');
+const chips = document.querySelectorAll('.chip');
+const works = document.querySelectorAll('#work-list li');
+
+chips.forEach((chip) => {
+  chip.addEventListener('click', () => {
+    const filter = chip.dataset.filter;
+    chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+    works.forEach((item) => {
+      item.hidden = filter !== 'all' && item.dataset.kind !== filter;
+    });
   });
 });
 
-document.querySelector('#print-btn')?.addEventListener('click', () => window.print());
+window.addEventListener('beforeprint', () => works.forEach((item) => { item.hidden = false; }));
 
+document.getElementById('print-btn').addEventListener('click', () => window.print());
+document.getElementById('year').textContent = new Date().getFullYear();

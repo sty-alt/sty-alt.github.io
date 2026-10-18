@@ -3,82 +3,231 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f5f5f2" />
-    <meta name="description" content="Олег — full-stack разработчик из Ташкента. Сайты для бизнеса, CRM, Telegram-автоматизация и Java-проекты." />
-    <meta property="og:title" content="Олег — full-stack разработчик" />
-    <meta property="og:description" content="Сайты, CRM и автоматизация для бизнеса. Избранные проекты и контакты." />
-    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#131a3d" />
     <title>Олег — сайты, CRM и автоматизация</title>
+    <meta name="description" content="Олег — full-stack разработчик из Ташкента. Сайты и CRM для бизнеса, киноплатформа Kadvarium, Telegram-боты, Electron-приложения и Java-плагины." />
+    <meta property="og:title" content="Олег — сайты, CRM и автоматизация" />
+    <meta property="og:description" content="Leon Service, Leon CRM, Kadvarium, «Согласовано» и ещё 15 проектов: живые ссылки, скриншоты и исходный код." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sty-alt.github.io/" />
+    <meta property="og:image" content="https://sty-alt.github.io/assets/leoncrm.webp" />
+    <link rel="canonical" href="https://sty-alt.github.io/" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b3fd6'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='34' text-anchor='middle' fill='%23ffce3a'%3EО%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Person","name":"Олег","alternateName":"sxkadamn","jobTitle":"Full-stack разработчик","address":{"@type":"PostalAddress","addressLocality":"Ташкент","addressCountry":"UZ"},"url":"https://sty-alt.github.io/","sameAs":["https://github.com/sty-alt","https://t.me/amespoalplugins"]}
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#main">К содержанию</a>
     <header class="site-header">
-      <div class="header-inner">
-        <a class="identity" href="#top" aria-label="Олег — к началу страницы"><span class="avatar-letter">О</span><span><strong>Олег</strong><small>WEB · CRM · AUTOMATION</small></span></a>
-        <nav id="site-nav" aria-label="Навигация"><a href="#projects">Проекты</a><a href="#experience">Опыт</a><a href="#stack">Стек</a><a href="#contact">Контакт</a></nav>
-        <button class="menu-btn" id="menu-btn" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <div class="wrap header-inner">
+        <a class="identity" href="#top"><span class="mark" aria-hidden="true">О</span><span>Олег<small>сайты, CRM, автоматизация</small></span></a>
+        <nav id="site-nav" aria-label="Разделы">
+          <a href="#cases">Кейсы</a>
+          <a href="#index">Все работы</a>
+          <a href="#process">Как работаю</a>
+          <a href="#contact">Контакт</a>
+        </nav>
+        <button class="menu-btn" id="menu-btn" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
       </div>
     </header>
 
-    <main id="top" class="page">
-      <section class="hero" aria-labelledby="hero-title">
+    <main id="main">
+      <section class="hero wrap" id="top" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Олег · Ташкент / удалённо</p>
-          <h1 id="hero-title">Создаю сайты и&nbsp;системы, которые помогают бизнесу работать.</h1>
-          <p class="hero-lead">Разрабатываю интерфейсы, CRM и сервисы автоматизации — от модели данных и API до понятного сценария для клиента и команды.</p>
-          <div class="hero-actions"><a class="primary-button" href="https://t.me/amespoalplugins" target="_blank" rel="noopener noreferrer">Написать в Telegram <span aria-hidden="true">↗</span></a><a class="text-button" href="#projects">Смотреть проекты <span aria-hidden="true">↓</span></a></div>
-          <p class="hero-note">Открыт к проектам · Работаю с практическими задачами малого бизнеса</p>
-          <p class="print-contact">Telegram: t.me/amespoalplugins · GitHub: github.com/sty-alt</p>
+          <p class="hero-place">Ташкент, работаю и удалённо</p>
+          <h1 id="hero-title">Делаю сайты и&nbsp;системы, на которых работает бизнес.</h1>
+          <p class="lead">Сайт сервисного центра, его CRM на&nbsp;10&nbsp;ролей сотрудников, киноплатформа с&nbsp;AI-помощником, сервис согласования смет. Проектирую данные и&nbsp;API, собираю интерфейс, запускаю и&nbsp;поддерживаю.</p>
+          <div class="actions">
+            <a class="btn btn-signal" href="https://t.me/amespoalplugins" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+            <a class="btn btn-line" href="#cases">Смотреть кейсы</a>
+          </div>
+          <p class="print-only print-contact">Telegram: t.me/amespoalplugins &nbsp;|&nbsp; GitHub: github.com/sty-alt &nbsp;|&nbsp; Сайт: sty-alt.github.io</p>
         </div>
-        <div class="hero-aside" aria-label="Основные направления">
-          <span class="aside-label">Чем могу помочь</span>
-          <div class="aside-row"><strong>WEB</strong><span>Сайт и заявки</span></div>
-          <div class="aside-row"><strong>CRM</strong><span>CRM и процессы</span></div>
-          <div class="aside-row"><strong>BOT</strong><span>Telegram-автоматизация</span></div>
-          <div class="aside-row"><strong>DEV</strong><span>Поддержка и развитие</span></div>
-          <p>Проектирую решение, собираю рабочую версию и проверяю сценарии в коде и интерфейсе.</p>
-        </div>
-      </section>
-
-      <section class="intro-section" id="experience" aria-labelledby="experience-title">
-        <div class="section-heading"><span class="eyebrow">Профиль</span><h2 id="experience-title">От идеи до рабочего продукта</h2></div>
-        <div class="intro-grid">
-          <p>Мой основной бизнес-кейс — экосистема Leon Service: публичный сайт, CRM сервисного центра и отдельное направление 3D-печати. В CRM проработаны клиенты, устройства, ремонтные заказы, склад, платежи и роли сотрудников.</p>
-          <p>Также создаю демонстрационные сайты для ресторана, клиники, учебного центра, автосервиса и салона красоты. В других проектах работаю с Telegram-ботами, Electron-приложениями и Java-плагинами для Minecraft.</p>
+        <div class="hero-stack" aria-hidden="true">
+          <figure class="shot shot-back"><img src="assets/kadvarium.webp" alt="" width="1400" height="791" /></figure>
+          <figure class="shot shot-mid"><img src="assets/leonservice.webp" alt="" width="1400" height="791" /></figure>
+          <figure class="shot shot-front"><span class="shot-bar"><i></i><i></i><i></i><b>leoncrm.uz</b></span><img src="assets/leoncrm.webp" alt="" width="1400" height="791" /></figure>
         </div>
       </section>
 
-      <section class="projects-section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading"><span class="eyebrow">Избранная работа</span><h2 id="projects-title">Проекты с прямыми ссылками</h2><p>Откройте сайт или репозиторий, чтобы посмотреть результат.</p></div>
-        <div class="project-grid">
-          <a class="project-card featured" href="https://leonservice.uz/" target="_blank" rel="noopener noreferrer"><span class="project-kind">Сайт · Leon Service</span><span class="project-arrow" aria-hidden="true">↗</span><h3>Сервисный центр Leon Service</h3><p>Публичный сайт услуг с понятным путём от выбора ремонта до заявки.</p><span class="project-url">leonservice.uz</span></a>
-          <a class="project-card" href="https://leoncrm.uz/" target="_blank" rel="noopener noreferrer"><span class="project-kind">CRM · рабочие процессы</span><span class="project-arrow" aria-hidden="true">↗</span><h3>Leon CRM</h3><p>Заказы, клиенты, устройства, склад, платежи и доступ сотрудников в одной системе.</p><span class="project-url">leoncrm.uz</span></a>
-          <a class="project-card" href="https://leon3d.uz/" target="_blank" rel="noopener noreferrer"><span class="project-kind">Веб-сервис · 3D-печать</span><span class="project-arrow" aria-hidden="true">↗</span><h3>Leon 3D</h3><p>Сайт направления 3D-печати с каталогом моделей и сценарием оформления заказа.</p><span class="project-url">leon3d.uz</span></a>
+      <section class="live wrap" aria-label="Работает сейчас">
+        <p>Открыто и работает прямо сейчас:</p>
+        <ul>
+          <li><a href="https://leonservice.uz/" target="_blank" rel="noopener noreferrer">leonservice.uz</a></li>
+          <li><a href="https://leoncrm.uz/" target="_blank" rel="noopener noreferrer">leoncrm.uz</a></li>
+          <li><a href="https://kadvarium.fun/" target="_blank" rel="noopener noreferrer">kadvarium.fun</a></li>
+        </ul>
+      </section>
+
+      <section class="cases" id="cases" aria-labelledby="cases-title">
+        <div class="wrap">
+          <h2 id="cases-title" class="section-title">Кейсы</h2>
+
+          <article class="case">
+            <div class="case-media">
+              <img src="assets/leoncrm.webp" alt="Экран входа в Leon CRM: рабочее пространство команды сервисного центра" width="1400" height="791" loading="lazy" />
+              <img class="case-media-second" src="assets/leonservice.webp" alt="Главная страница сайта Leon Service" width="1400" height="791" loading="lazy" />
+            </div>
+            <div class="case-body">
+              <p class="case-meta">Сервисный центр, Ташкент · сайт, CRM, 3D-печать</p>
+              <h3>Leon Service: вся цифровая часть мастерской</h3>
+              <p>Сделал три связанных продукта для сервисного центра. Публичный сайт ведёт клиента от выбора ремонта до заявки на русском, узбекском и английском. CRM ведёт заказ по цепочке клиент → устройство → диагностика → ремонт → запчасти → оплата → гарантия.</p>
+              <ul class="facts">
+                <li>10 ролей сотрудников с настраиваемыми правами: от мастера и кладовщика до бухгалтера и владельца</li>
+                <li>Канбан ремонтов со статусами от «Новый» до «Выдан» или «Гарантия»</li>
+                <li>Склад запчастей, платежи и история по каждому устройству</li>
+                <li>Отдельный сайт направления 3D-печати с каталогом моделей и оформлением заказа</li>
+              </ul>
+              <p class="stack">Next.js · TypeScript · Prisma · PostgreSQL · PHP</p>
+              <div class="links">
+                <a href="https://leonservice.uz/" target="_blank" rel="noopener noreferrer">leonservice.uz</a>
+                <a href="https://leoncrm.uz/" target="_blank" rel="noopener noreferrer">leoncrm.uz</a>
+                <a href="https://leon3d.uz/" target="_blank" rel="noopener noreferrer">leon3d.uz</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case case-flip">
+            <div class="case-media">
+              <img src="assets/kadvarium.webp" alt="Главная Kadvarium: подборка фильма, боковое меню с каталогом, подборками и ИИ-помощником" width="1400" height="791" loading="lazy" />
+            </div>
+            <div class="case-body">
+              <p class="case-meta">Собственный продукт · киноплатформа</p>
+              <h3>Kadvarium: где выбрать, что посмотреть вечером</h3>
+              <p>Афиша фильмов и сериалов с личной коллекцией, кинодневником, подборками и профилями сообщества. Талисман — Кадвар, ночной кино-мотылёк с крыльями из киноплёнки.</p>
+              <ul class="facts">
+                <li>ИИ-помощник отвечает по каталогу, новостям и Википедии и показывает источники с датой проверки</li>
+                <li>Подбор фильма под настроение и свободное время, топ-10 по оценкам зрителей</li>
+                <li>Совместный просмотр с друзьями, вход через Google</li>
+                <li>Premium на 30, 90 и 365 дней с оплатой через ЮKassa; данные карты сайт не хранит</li>
+              </ul>
+              <p class="stack">Next.js 16 · React 19 · Tailwind CSS 4 · Prisma · SQLite · TMDb · Claude / OpenAI / Ollama</p>
+              <div class="links">
+                <a href="https://kadvarium.fun/" target="_blank" rel="noopener noreferrer">kadvarium.fun</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case">
+            <div class="case-media">
+              <img src="assets/soglasovano.webp" alt="«Согласовано»: мастер пишет заметку, AI готовит черновик объяснения для клиента, справа итог сметы 400 000 сум" width="1400" height="786" loading="lazy" />
+            </div>
+            <div class="case-body">
+              <p class="case-meta">MVP для мастерских по ремонту техники</p>
+              <h3>«Согласовано»: клиент одобряет смету по ссылке</h3>
+              <p>Мастер нашёл неисправность и назвал цену, а через неделю клиент не помнит, на что соглашался. Здесь мастер за пару минут собирает смету из своего прайса, клиент получает ссылку, задаёт вопрос и нажимает «Согласовать». Если цена меняется, выходит новая версия, а прежнее решение сохраняется.</p>
+              <ul class="facts">
+                <li>AI-черновик объяснения для клиента; мастер проверяет текст перед публикацией</li>
+                <li>55 unit-, 13 интеграционных и браузерные тесты, CI</li>
+                <li>Запуск демо одним файлом на Windows, презентация и видео на 9 минут</li>
+              </ul>
+              <p class="stack">Next.js · TypeScript · PostgreSQL · Prisma · Playwright · OpenRouter</p>
+              <div class="links">
+                <a href="https://github.com/sty-alt/VippIProject" target="_blank" rel="noopener noreferrer">Код на GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case case-flip">
+            <div class="case-media">
+              <img src="assets/team-dashboard.webp" alt="Nexoda4TEAM: дашборд команды с задачами, спринтом, проектами и лентой активности" width="1400" height="972" loading="lazy" />
+            </div>
+            <div class="case-body">
+              <p class="case-meta">Собственный продукт · командная работа</p>
+              <h3>Nexoda4TEAM: задачи, чат и документы в одном месте</h3>
+              <p>Рабочее пространство для небольших команд: вместо отдельных трекера задач, мессенджера и базы знаний.</p>
+              <ul class="facts">
+                <li>Канбан с перетаскиванием, планировщик дня и таймер задач</li>
+                <li>Редактор документов с командами через «/», каналы и личные сообщения</li>
+                <li>Связь задач с pull request и коммитами GitHub, отчёты по скорости команды</li>
+                <li>Роли и права доступа, журнал действий для администратора</li>
+              </ul>
+              <p class="stack">Next.js · TypeScript · Prisma · SQLite · Zustand · Tailwind CSS</p>
+              <div class="links">
+                <a href="https://github.com/sty-alt/Nexoda4TEAM" target="_blank" rel="noopener noreferrer">Код на GitHub</a>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
-      <section class="more-section" aria-labelledby="more-title">
-        <div class="section-heading"><span class="eyebrow">Другие проекты</span><h2 id="more-title">Автоматизация и открытый код</h2></div>
-        <div class="more-grid">
-          <article class="more-card"><span class="eyebrow">Python · SQLite</span><h3>Telegram-бот онлайн-записи</h3><p>Запись на услугу и к мастеру, управление расписанием, отмена и напоминания клиентам.</p></article>
-          <article class="more-card"><span class="eyebrow">Electron · React · TypeScript</span><h3>NexodaLauncher</h3><p>Десктопный Minecraft-лаунчер: профили, версии, моды и запуск игры.</p></article>
-          <a class="more-card linked" href="https://github.com/sty-alt/ReAuction" target="_blank" rel="noopener noreferrer"><span class="eyebrow">Java · Paper · GitHub</span><h3>ReAuction <span aria-hidden="true">↗</span></h3><p>Аукцион для Minecraft с лотами, ставками, ордерами и выдачей предметов.</p></a>
-          <a class="more-card linked" href="https://github.com/sty-alt/DynamicWorldFusion" target="_blank" rel="noopener noreferrer"><span class="eyebrow">Java · Paper · GitHub</span><h3>DynamicWorldFusion <span aria-hidden="true">↗</span></h3><p>Распределение игровых зон между серверными узлами и интерфейс наблюдения за нагрузкой.</p></a>
+      <section class="index wrap" id="index" aria-labelledby="index-title">
+        <div class="index-head">
+          <h2 id="index-title" class="section-title">Все работы</h2>
+          <div class="filters" role="group" aria-label="Показать работы">
+            <button type="button" class="chip" data-filter="all" aria-pressed="true">Все</button>
+            <button type="button" class="chip" data-filter="web" aria-pressed="false">Сайты для бизнеса</button>
+            <button type="button" class="chip" data-filter="bot" aria-pressed="false">Боты и AI</button>
+            <button type="button" class="chip" data-filter="desktop" aria-pressed="false">Десктоп</button>
+            <button type="button" class="chip" data-filter="java" aria-pressed="false">Java и Minecraft</button>
+          </div>
+        </div>
+        <ol class="work-list" id="work-list">
+          <li data-kind="web"><h3>ZAFARAN</h3><p>Сайт ресторана высокой кухни: бронирование столиков, AI-консьерж, админ-панель и уведомления в Telegram.</p><span class="w-stack">Next.js 16 · Tailwind</span><span class="w-link">демо</span></li>
+          <li data-kind="web"><h3>Aura Dental</h3><p>Сайт стоматологической клиники с записью на приём, админкой и заявками в Telegram.</p><span class="w-stack">Next.js · Framer Motion · Zod</span><span class="w-link">демо</span></li>
+          <li data-kind="web"><h3>Nexoda Academy</h3><p>Сайт учебного центра и CRM: каталог курсов, заявки, AI-консультант, Telegram Bot API.</p><span class="w-stack">Next.js · Prisma</span><span class="w-link">демо</span></li>
+          <li data-kind="web"><h3>VELOCE Auto Atelier</h3><p>Сайт автосервиса и детейлинг-студии с 3D-моделью автомобиля.</p><span class="w-stack">Next.js · Three.js</span><span class="w-link">демо</span></li>
+          <li data-kind="web"><h3>AURA DE BEAUTÉ</h3><p>Сайт салона красоты: услуги, мастера и запись.</p><span class="w-stack">React 19 · Vite · Tailwind 4</span><span class="w-link">демо</span></li>
+          <li data-kind="web"><h3>NexoTyan</h3><p>Платформа аниме-сообщества: каталог, списки, социальные функции. В разработке.</p><span class="w-stack">Next.js · PostgreSQL · better-auth</span><span class="w-link">в работе</span></li>
+          <li data-kind="bot"><h3><a href="https://github.com/sty-alt/NexodaMM" target="_blank" rel="noopener noreferrer">NexodaMM</a></h3><p>Telegram-бот онлайн-записи: услуга, мастер, время, напоминания. Владелец ведёт расписание и рассылки прямо в чате.</p><span class="w-stack">Python · SQLite</span><span class="w-link">GitHub</span></li>
+          <li data-kind="bot"><h3><a href="https://github.com/sty-alt/ai-sales-agent" target="_blank" rel="noopener noreferrer">AI Sales Agent</a></h3><p>Telegram-бот для продаж: клиенты и заявки, черновики сообщений через Claude, статистика.</p><span class="w-stack">Python · SQLAlchemy · Claude API</span><span class="w-link">GitHub</span></li>
+          <li data-kind="bot"><h3>Агент аниме-новостей</h3><p>Собирает новости из RSS, анализирует их через Gemini и публикует посты в Telegram-канал.</p><span class="w-stack">Python · Gemini · Docker</span><span class="w-link">приватно</span></li>
+          <li data-kind="desktop"><h3>NexodaLauncher</h3><p>Лаунчер Minecraft для Windows: профили, версии, моды, установщик и автообновление.</p><span class="w-stack">Electron · React · TypeScript · Vitest</span><span class="w-link">приватно</span></li>
+          <li data-kind="desktop"><h3>Nexoda Browser</h3><p>Приватный браузер со встроенным менеджером паролей: AES-256-GCM, ключ из мастер-пароля через PBKDF2.</p><span class="w-stack">Electron · Node.js · Jest</span><span class="w-link">приватно</span></li>
+          <li data-kind="java"><h3><a href="https://github.com/sty-alt/ReAuction" target="_blank" rel="noopener noreferrer">ReAuction</a></h3><p>Аукцион для Paper 1.21: лоты, ставки, ордера на покупку, почтовая выдача, защита от злоупотреблений.</p><span class="w-stack">Java 21 · SQLite / MySQL · HikariCP</span><span class="w-link">GitHub</span></li>
+          <li data-kind="java"><h3><a href="https://github.com/sty-alt/ReCases" target="_blank" rel="noopener noreferrer">ReCases</a></h3><p>Кейсы с анимациями открытия и публичным API для аддонов.</p><span class="w-stack">Java 17 · Spigot · JitPack</span><span class="w-link">GitHub</span></li>
+          <li data-kind="java"><h3><a href="https://github.com/sty-alt/ReCasino" target="_blank" rel="noopener noreferrer">ReCasino</a></h3><p>Казино-плагин: несколько режимов, анимации, многомодульный проект с API и примером аддона.</p><span class="w-stack">Java · Maven · JitPack</span><span class="w-link">GitHub</span></li>
+          <li data-kind="java"><h3><a href="https://github.com/sty-alt/DynamicWorldFusion" target="_blank" rel="noopener noreferrer">DynamicWorldFusion</a></h3><p>Распределяет игровые зоны между серверными узлами и показывает нагрузку.</p><span class="w-stack">Java · Paper</span><span class="w-link">GitHub</span></li>
+          <li data-kind="java"><h3>NexodaVisuals</h3><p>Клиентский мод: компактный HUD, три темы, экран настроек.</p><span class="w-stack">Java · Fabric · Gradle</span><span class="w-link">приватно</span></li>
+        </ol>
+        <p class="index-note">Демо — готовые сайты для отраслей, которые показываю клиентам на встрече. Покажу любой из них вживую или по видео.</p>
+      </section>
+
+      <section class="process wrap" id="process" aria-labelledby="process-title">
+        <h2 id="process-title" class="section-title">Как работаю</h2>
+        <ol class="steps">
+          <li><h3>Разбираю задачу</h3><p>Спрашиваю, как вы работаете сейчас и где теряются заявки, деньги или время. Предлагаю первый шаг, который окупится быстрее всего.</p></li>
+          <li><h3>Показываю прототип</h3><p>Вы получаете ссылку на рабочую версию с вашими услугами и ценами, а не макет в презентации.</p></li>
+          <li><h3>Довожу до запуска</h3><p>Подключаю домен, формы, Telegram-уведомления и оплату. Проверяю сценарии на телефоне и в разных браузерах.</p></li>
+          <li><h3>Остаюсь на связи</h3><p>Исправляю, добавляю функции и слежу, чтобы сайт и CRM работали без перебоев.</p></li>
+        </ol>
+      </section>
+
+      <section class="tools wrap" aria-labelledby="tools-title">
+        <h2 id="tools-title" class="section-title">Инструменты</h2>
+        <dl class="tool-grid">
+          <div><dt>Интерфейсы</dt><dd>TypeScript, React, Next.js, Tailwind CSS, Framer Motion, Three.js</dd></div>
+          <div><dt>Сервер и данные</dt><dd>Node.js, Prisma, PostgreSQL, SQLite, MySQL, PHP, Python</dd></div>
+          <div><dt>Интеграции и AI</dt><dd>Telegram Bot API, ЮKassa, Google OAuth, Claude, OpenAI, Gemini, Ollama</dd></div>
+          <div><dt>Десктоп и Java</dt><dd>Electron, Java 17–21, Paper / Spigot, Fabric, Maven, Gradle</dd></div>
+          <div><dt>Качество</dt><dd>ESLint, Vitest, Jest, Playwright, GitHub Actions, Docker</dd></div>
+        </dl>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="wrap contact-inner">
+          <div>
+            <h2 id="contact-title">Расскажите, что нужно запустить или улучшить.</h2>
+            <p>Напишите в Telegram: обсудим задачу, и я предложу первый шаг с понятным сроком.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-signal" href="https://t.me/amespoalplugins" target="_blank" rel="noopener noreferrer">Telegram @amespoalplugins</a>
+            <a class="btn btn-ghost" href="https://github.com/sty-alt" target="_blank" rel="noopener noreferrer">GitHub sty-alt</a>
+            <button class="btn btn-ghost" id="print-btn" type="button">Сохранить в PDF</button>
+          </div>
         </div>
       </section>
-
-      <section class="stack-section" id="stack" aria-labelledby="stack-title">
-        <div class="section-heading"><span class="eyebrow">Инструменты</span><h2 id="stack-title">Технологии</h2></div>
-        <div class="stack-grid"><div><h3>Веб</h3><p>TypeScript, JavaScript, React, Next.js, HTML, CSS, Tailwind CSS</p></div><div><h3>Сервер и данные</h3><p>Node.js, Prisma, PostgreSQL, SQLite, Python, Telegram Bot API</p></div><div><h3>Десктоп и Java</h3><p>Electron, Java, Paper / Spigot, Maven, Gradle, Git</p></div></div>
-      </section>
-
-      <section class="contact-panel" id="contact" aria-labelledby="contact-title"><div><span class="eyebrow">Контакт</span><h2 id="contact-title">Обсудим вашу задачу.</h2><p>Напишите, что хотите запустить или улучшить. Я предложу понятный первый шаг.</p></div><div class="contact-actions"><a class="primary-button" href="https://t.me/amespoalplugins" target="_blank" rel="noopener noreferrer">Telegram @amespoalplugins ↗</a><a class="secondary-button" href="https://github.com/sty-alt" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="secondary-button print-button" id="print-btn" type="button">Печать / PDF</button></div></section>
     </main>
-    <footer class="footer"><span>© 2026 Олег</span><span>Ташкент · сайты, CRM и автоматизация</span><a href="#top">Наверх ↑</a></footer>
+
+    <footer class="footer wrap">
+      <span>© <span id="year">2026</span> Олег, Ташкент</span>
+      <a href="#top">Наверх</a>
+    </footer>
   </body>
 </html>
-
