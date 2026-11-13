@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0a2a23" />
+    <meta name="theme-color" content="#0a1030" />
     <title>Олег — сайты, CRM и приложения</title>
     <meta name="description" content="Олег — full-stack разработчик из Ташкента. Сайты и CRM для бизнеса, киноплатформа Kadvarium с Android-приложением и голосовыми залами, Telegram-боты, десктоп на Electron и Java-плагины." />
     <meta property="og:title" content="Олег — сайты, CRM и приложения" />
@@ -12,11 +12,14 @@
     <meta property="og:url" content="https://sty-alt.github.io/" />
     <meta property="og:image" content="https://sty-alt.github.io/assets/kadvarium.webp" />
     <link rel="canonical" href="https://sty-alt.github.io/" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23103d33'/%3E%3Ctext x='32' y='45' font-family='Arial' font-weight='700' font-size='36' text-anchor='middle' fill='%23f4b232'%3EО%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1030'/%3E%3Ctext x='32' y='45' font-family='Arial' font-weight='700' font-size='36' text-anchor='middle' fill='%23ffc247'%3EО%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Sofia+Sans+Extra+Condensed:wght@700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="ikat.js" defer></script>
     <script src="app.js" defer></script>
     <script type="application/ld+json">
       {"@context":"https://schema.org","@type":"Person","name":"Олег","alternateName":"sxkadamn","jobTitle":"Full-stack разработчик","address":{"@type":"PostalAddress","addressLocality":"Ташкент","addressCountry":"UZ"},"url":"https://sty-alt.github.io/","sameAs":["https://github.com/sty-alt","https://t.me/amespoalplugins"]}
@@ -24,7 +27,7 @@
   </head>
   <body>
     <a class="skip-link" href="#main">К содержанию</a>
-    <header class="site-header">
+    <header class="site-header" id="site-header">
       <div class="wrap header-inner">
         <a class="identity" href="#top"><span class="mark" aria-hidden="true">О</span><span>Олег<small>разработчик, Ташкент</small></span></a>
         <nav id="site-nav" aria-label="Разделы">
@@ -38,10 +41,11 @@
     </header>
 
     <main id="main">
-      <section class="hero wrap" id="top" aria-labelledby="hero-title">
-        <h1 id="hero-title">Делаю сайты, CRM и&nbsp;приложения, которыми пользуются каждый день.</h1>
-        <div class="hero-grid">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <canvas class="ikat" data-ikat="fade" aria-hidden="true"></canvas>
+        <div class="wrap hero-grid">
           <div class="hero-copy">
+            <h1 id="hero-title">Делаю сайты, CRM и&nbsp;приложения, которыми пользуются каждый день.</h1>
             <p class="lead">Киноплатформа с&nbsp;Android-приложением и&nbsp;голосовыми залами, сайт сервисного центра и&nbsp;его CRM на&nbsp;10&nbsp;ролей, сервис согласования смет. Проектирую данные и&nbsp;API, собираю интерфейс, выкладываю и&nbsp;поддерживаю.</p>
             <p class="hero-place">Ташкент. Ищу работу и&nbsp;принимаю заказы, работаю удалённо.</p>
             <div class="actions">
@@ -63,11 +67,14 @@
             </ol>
           </div>
         </div>
-        <figure class="stage">
+      </section>
+
+      <div class="wrap stage-zone">
+        <figure class="stage" id="stage">
           <img class="stage-desktop" src="assets/kadvarium.webp" alt="Главная страница Kadvarium: фильм дня, поиск, вход и Premium" width="1400" height="788" />
           <img class="stage-phone" src="assets/kadvarium-mobile.webp" alt="Kadvarium на телефоне: главная и нижняя панель с разделами" width="720" height="1558" />
         </figure>
-      </section>
+      </div>
 
       <section class="live wrap" aria-label="Работает сейчас">
         <p>Открыто и работает прямо сейчас:</p>
@@ -82,8 +89,8 @@
         <div class="wrap">
           <h2 id="cases-title" class="section-title">Кейсы</h2>
 
-          <article class="case case-wide">
-            <div class="case-media">
+          <article class="case case-wide" data-tone="cobalt">
+            <div class="case-media" data-tilt>
               <img src="assets/kadvarium-quests.webp" alt="Kadvarium: ежедневные квесты, прогресс дня в XP и уровень зрителя" width="1400" height="788" loading="lazy" />
             </div>
             <div class="case-body">
@@ -106,8 +113,8 @@
             </div>
           </article>
 
-          <article class="case case-flip">
-            <div class="case-media">
+          <article class="case case-flip" data-tone="turq">
+            <div class="case-media" data-tilt>
               <img src="assets/leonservice.webp" alt="Главная страница сайта Leon Service: ремонт компьютеров и офисной техники в Ташкенте" width="1400" height="788" loading="lazy" />
               <img class="case-media-second" src="assets/leoncrm.webp" alt="Экран входа в Leon CRM: рабочее пространство команды сервисного центра" width="1400" height="788" loading="lazy" />
             </div>
@@ -129,8 +136,8 @@
             </div>
           </article>
 
-          <article class="case">
-            <div class="case-media">
+          <article class="case" data-tone="pom">
+            <div class="case-media" data-tilt>
               <img src="assets/soglasovano.webp" alt="«Согласовано»: мастер пишет заметку, AI готовит черновик объяснения для клиента, справа итог сметы 400 000 сум" width="1400" height="786" loading="lazy" />
             </div>
             <div class="case-body">
@@ -149,8 +156,8 @@
             </div>
           </article>
 
-          <article class="case case-flip">
-            <div class="case-media">
+          <article class="case case-flip" data-tone="saffron">
+            <div class="case-media" data-tilt>
               <img src="assets/kadra.webp" alt="Панель Кадры: чат, подготовка локальной модели и голоса, переключатели микрофона, озвучки и памяти" width="1180" height="780" loading="lazy" />
             </div>
             <div class="case-body">
@@ -168,8 +175,8 @@
             </div>
           </article>
 
-          <article class="case">
-            <div class="case-media">
+          <article class="case" data-tone="night">
+            <div class="case-media" data-tilt>
               <img src="assets/team-dashboard.webp" alt="Nexoda4TEAM: дашборд команды с задачами, спринтом, проектами и лентой активности" width="1400" height="972" loading="lazy" />
             </div>
             <div class="case-body">
@@ -250,6 +257,7 @@
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
+        <canvas class="ikat ikat-band" data-ikat="full" aria-hidden="true"></canvas>
         <div class="wrap contact-inner">
           <div>
             <h2 id="contact-title">Расскажите, что нужно запустить или улучшить.</h2>
@@ -264,9 +272,11 @@
       </section>
     </main>
 
-    <footer class="footer wrap">
-      <span>© <span id="year">2026</span> Олег, Ташкент</span>
-      <a href="#top">Наверх</a>
-    </footer>
+    <div class="footer-bar">
+      <footer class="footer wrap">
+        <span>© <span id="year">2026</span> Олег, Ташкент</span>
+        <a href="#top">Наверх</a>
+      </footer>
+    </div>
   </body>
 </html>
