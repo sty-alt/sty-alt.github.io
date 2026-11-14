@@ -177,6 +177,24 @@ section[id] { scroll-margin-top: 84px; }
 .tool-grid dt { font-weight: 600; }
 .tool-grid dd { margin: 6px 0 0; font-size: 15.5px; color: var(--text); }
 
+/* CV */
+.hero-role { margin-bottom: 18px; font-weight: 600; font-size: 15.5px; color: var(--turq); }
+.cv { padding: 0 0 96px; }
+.cv-grid { margin-top: 32px; display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 56px; border-top: 2px solid var(--ink); padding-top: 28px; }
+.cv-summary { font-size: 18px; color: var(--text); max-width: 40em; }
+.cv-h { margin-top: 36px; font-size: 20px; font-weight: 600; }
+.cv-jobs { margin: 12px 0 0; padding: 0; list-style: none; }
+.cv-jobs li { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.cv-when { font-size: 14.5px; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.cv-jobs h4 { margin: 0; font-size: 17px; font-weight: 600; }
+.cv-jobs h4 span { font-weight: 400; color: var(--muted); }
+.cv-jobs p:not(.cv-when) { margin-top: 6px; font-size: 15.5px; color: var(--text); }
+.cv-side { margin: 0; }
+.cv-side div { padding: 0 0 18px; margin-bottom: 18px; border-bottom: 1px solid var(--line); }
+.cv-side dt { font-weight: 600; margin-bottom: 6px; }
+.cv-side dd { margin: 3px 0 0; font-size: 15.5px; color: var(--text); }
+.cv-side a { color: var(--cobalt); }
+
 /* Contact */
 .contact { background: var(--night); color: var(--white); padding: 0 0 88px; }
 .ikat-band { position: static; height: clamp(72px, 9vw, 120px); margin-bottom: 80px; }
@@ -225,6 +243,12 @@ section[id] { scroll-margin-top: 84px; }
   .index { padding-bottom: 64px; }
   .tools { padding: 56px 0 72px; }
   .ikat-band { margin-bottom: 56px; }
+  .cv { padding-bottom: 64px; }
+  .cv-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+@media screen and (max-width: 600px) {
+  .cv-jobs li { grid-template-columns: 1fr; gap: 4px; }
+  .cv-summary { font-size: 16.5px; }
 }
 @media screen and (max-width: 600px) {
   body { font-size: 16px; }
@@ -300,6 +324,23 @@ section[id] { scroll-margin-top: 84px; }
   .contact { background: #fff; color: var(--ink); padding: 18px 0 0; }
   .contact h2 { font-size: 15pt; }
   .contact p { color: var(--ink); margin-top: 6px; }
-  .contact p::after { content: ' Telegram: t.me/amespoalplugins, GitHub: github.com/sty-alt'; font-weight: 600; }
+  .contact p::after { content: ' Email: ratme011@gmail.com, Telegram: t.me/amespoalplugins, GitHub: github.com/sty-alt'; font-weight: 600; }
   a { text-decoration: none; }
+  .process, .stage-zone, .case-media, .log { display: none !important; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .case, .case-wide { grid-template-columns: 1fr; }
+  .hero-role { margin-bottom: 6px; font-size: 10.5pt; color: var(--cobalt); }
+  .cv { padding: 6px 0 0; }
+  .cv-grid { margin-top: 8px; padding-top: 10px; gap: 22px; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); }
+  .cv-summary { font-size: 10pt; }
+  .cv-h { margin-top: 10px; font-size: 11pt; }
+  .cv-jobs { margin-top: 4px; }
+  .cv-jobs li { grid-template-columns: 26mm minmax(0, 1fr); gap: 8px; padding: 6px 0; break-inside: avoid; }
+  .cv-when { font-size: 8.5pt; }
+  .cv-jobs h4 { font-size: 10pt; }
+  .cv-jobs p:not(.cv-when) { margin-top: 2px; font-size: 9pt; }
+  .cv-side div { padding-bottom: 7px; margin-bottom: 7px; }
+  .cv-side dt { font-size: 10pt; margin-bottom: 2px; }
+  .cv-side dd { font-size: 9pt; }
+  .cv-side a { color: var(--ink); }
 }

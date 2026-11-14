@@ -44,7 +44,6 @@ chips.forEach((chip) => {
 });
 
 window.addEventListener('beforeprint', () => works.forEach((item) => { item.hidden = false; }));
-document.getElementById('print-btn').addEventListener('click', () => window.print());
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* Наклон скриншотов за курсором */
